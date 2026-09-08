@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Website resmi Pondok Pesantren Sirajul Huda - Pendidikan Islami, Berkarakter, Berprestasi." />
+  <meta name="theme-color" content="#0f5132" />
+  <title>Pondok Pesantren Sirajul Huda</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    :root{
+      --primary:#0f5132;
+      --primary-2:#167447;
+      --dark:#0d1b16;
+      --gold:#d4a72c;
+      --cream:#f8f6ef;
+      --white:#ffffff;
+      --muted:#66756d;
+      --border:#e7ece9;
+      --shadow:0 18px 55px rgba(15,81,50,.13);
+      --radius:22px;
+    }
+
+    *{margin:0;padding:0;box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Inter',sans-serif;
+      color:var(--dark);
+      background:#fff;
+      line-height:1.65;
+      overflow-x:hidden;
+    }
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    button,input,textarea{font:inherit}
+    .container{width:min(1180px,92%);margin:auto}
+    .section{padding:88px 0}
+    .section-head{max-width:740px;margin:0 auto 46px;text-align:center}
+    .eyebrow{
+      display:inline-flex;align-items:center;gap:8px;
+      padding:8px 14px;border-radius:999px;
+      color:var(--primary);background:#eaf5ef;
+      font-size:.78rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;
+      margin-bottom:14px
+    }
+    .section-head h2{font-size:clamp(2rem,4vw,3.15rem);line-height:1.15;margin-bottom:14px}
+    .section-head p{color:var(--muted);font-size:1rem}
+    .btn{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;
+      min-height:48px;padding:0 20px;border-radius:14px;font-weight:700;
+      transition:.25s ease;border:1px solid transparent;cursor:pointer
+    }
+    .btn-primary{background:var(--gold);color:#1e1e16}
+    .btn-primary:hover{transform:translateY(-2px);filter:brightness(1.04)}
+    .btn-outline{border-color:rgba(255,255,255,.45);color:#fff;background:rgba(255,255,255,.06)}
+    .btn-outline:hover{background:#fff;color:var(--primary)}
+    .btn-green{background:var(--primary);color:#fff}
+    .btn-green:hover{background:var(--primary-2);transform:translateY(-2px)}
+
+    /* NAV */
+    .topbar{
+      background:#0b3e27;color:#dcebe2;font-size:.85rem
+    }
+    .topbar .container{
+      min-height:38px;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap
+    }
+    .topbar .left,.topbar .right{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+    .topbar a:hover{color:#fff}
+    header{
+      position:sticky;top:0;z-index:999;
+      background:rgba(255,255,255,.94);backdrop-filter:blur(16px);
+      border-bottom:1px solid rgba(15,81,50,.08)
+    }
+    nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--primary)}
+    .logo{
+      width:46px;height:46px;border-radius:50%;
+      background:linear-gradient(145deg,var(--primary),#23915b);
+      color:#fff;display:grid;place-items:center;font-size:1.25rem;
+      box-shadow:0 8px 18px rgba(15,81,50,.22)
+    }
+    .brand-text{line-height:1.05}
+    .brand-text small{display:block;font-size:.68rem;color:var(--muted);font-weight:600;letter-spacing:.04em;margin-top:5px}
+    .nav-links{display:flex;align-items:center;gap:26px;font-size:.92rem;font-weight:600}
+    .nav-links a{position:relative}
+    .nav-links a:after{
+      content:"";position:absolute;left:0;bottom:-8px;width:0;height:2px;background:var(--gold);transition:.25s
+    }
+    .nav-links a:hover:after{width:100%}
+    .menu-toggle{
+      display:none;width:44px;height:44px;border-radius:12px;border:1px solid var(--border);
+      background:#fff;color:var(--primary);font-size:1.15rem
+    }
+
+    /* HERO */
+    .hero{
+      min-height:690px;position:relative;display:flex;align-items:center;isolation:isolate;
+      background:
+        linear-gradient(90deg,rgba(6,41,25,.94) 0%,rgba(6,41,25,.84) 45%,rgba(6,41,25,.3) 100%),
+        url('https://images.unsplash.com/photo-1542810634-71277d95dcbb?auto=format&fit=crop&w=1800&q=85') center/cover no-repeat;
+      color:#fff
+    }
+    .hero:before{
+      content:"";position:absolute;inset:0;z-index:-1;
+      background:radial-gradient(circle at 75% 20%,rgba(212,167,44,.24),transparent 28%)
+    }
+    .hero-content{max-width:760px;padding:80px 0}
+    .hero .arabic{
+      font-family:'Amiri',serif;font-size:1.5rem;color:#f8df92;margin-bottom:14px
+    }
+    .hero h1{font-size:clamp(2.65rem,6vw,5rem);line-height:1.03;letter-spacing:-.045em;margin-bottom:20px}
+    .hero h1 span{color:#f3d56e}
+    .hero p{max-width:650px;color:#e8f0eb;font-size:1.08rem;margin-bottom:30px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-badges{display:flex;gap:14px;flex-wrap:wrap;margin-top:38px}
+    .hero-badge{
+      min-width:155px;padding:14px 16px;border:1px solid rgba(255,255,255,.18);
+      background:rgba(255,255,255,.08);backdrop-filter:blur(10px);border-radius:16px
+    }
+    .hero-badge strong{display:block;font-size:1.3rem;color:#fff}
+    .hero-badge span{font-size:.82rem;color:#cfe0d6}
+
+    /* INFO STRIP */
+    .info-strip{margin-top:-44px;position:relative;z-index:5}
+    .info-grid{
+      display:grid;grid-template-columns:repeat(3,1fr);
+      background:#fff;border-radius:22px;box-shadow:var(--shadow);overflow:hidden
+    }
+    .info-item{padding:26px;display:flex;gap:16px;align-items:flex-start;border-right:1px solid var(--border)}
+    .info-item:last-child{border-right:0}
+    .info-icon{
+      width:48px;height:48px;border-radius:14px;display:grid;place-items:center;
+      background:#ecf6f0;color:var(--primary);font-size:1.15rem;flex:0 0 auto
+    }
+    .info-item h4{font-size:1rem;margin-bottom:3px}
+    .info-item p{font-size:.86rem;color:var(--muted)}
+
+    /* ABOUT */
+    .about-grid{display:grid;grid-template-columns:1.08fr .92fr;gap:58px;align-items:center}
+    .about-image{position:relative}
+    .about-image img{width:100%;height:540px;object-fit:cover;border-radius:28px;box-shadow:var(--shadow)}
+    .quote-card{
+      position:absolute;right:-22px;bottom:28px;width:min(330px,86%);
+      background:#fff;border-radius:20px;padding:22px;box-shadow:var(--shadow);border:1px solid var(--border)
+    }
+    .quote-card .arabic{font-family:'Amiri',serif;font-size:1.45rem;color:var(--primary);margin-bottom:8px}
+    .about-copy h2{font-size:clamp(2rem,4vw,3.2rem);line-height:1.13;margin-bottom:18px}
+    .about-copy p{color:var(--muted);margin-bottom:14px}
+    .check-list{display:grid;gap:12px;margin:24px 0 30px}
+    .check{display:flex;gap:11px;align-items:flex-start}
+    .check i{margin-top:5px;color:var(--primary)}
+
+    /* STATS */
+    .stats{background:var(--primary);color:#fff;padding:48px 0}
+    .stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+    .stat{text-align:center;padding:10px}
+    .stat strong{display:block;font-size:2.35rem;line-height:1;font-weight:800;color:#f5d972}
+    .stat span{display:block;margin-top:8px;color:#d7e6dd;font-size:.9rem}
+
+    /* PROGRAMS */
+    .programs{background:var(--cream)}
+    .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .program-card{
+      background:#fff;border:1px solid #edf0ed;border-radius:var(--radius);
+      padding:28px;transition:.25s;position:relative;overflow:hidden
+    }
+    .program-card:before{
+      content:"";position:absolute;right:-40px;top:-40px;width:120px;height:120px;border-radius:50%;
+      background:rgba(15,81,50,.05)
+    }
+    .program-card:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+    .program-card .icon{
+      width:56px;height:56px;border-radius:16px;display:grid;place-items:center;
+      background:#eaf5ef;color:var(--primary);font-size:1.3rem;margin-bottom:20px
+    }
+    .program-card h3{font-size:1.16rem;margin-bottom:9px}
+    .program-card p{color:var(--muted);font-size:.92rem}
+
+    /* FACILITIES */
+    .facility-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .facility{
+      border-radius:20px;overflow:hidden;position:relative;height:290px
+    }
+    .facility img{width:100%;height:100%;object-fit:cover;transition:.45s}
+    .facility:after{
+      content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,29,17,.88),transparent 65%)
+    }
+    .facility span{
+      position:absolute;left:20px;bottom:18px;z-index:2;color:#fff;font-weight:700;font-size:1rem
+    }
+    .facility:hover img{transform:scale(1.06)}
+
+    /* NEWS */
+    .news{background:#f8faf9}
+    .news-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:26px}
+    .featured-news,.mini-news{
+      background:#fff;border-radius:22px;overflow:hidden;border:1px solid var(--border)
+    }
+    .featured-news img{width:100%;height:330px;object-fit:cover}
+    .news-content{padding:24px}
+    .meta{display:flex;gap:12px;align-items:center;color:var(--muted);font-size:.8rem;margin-bottom:10px}
+    .news-content h3{font-size:1.4rem;line-height:1.35;margin-bottom:9px}
+    .news-content p{color:var(--muted);font-size:.92rem}
+    .mini-list{display:grid;gap:16px}
+    .mini-news{display:grid;grid-template-columns:140px 1fr}
+    .mini-news img{width:100%;height:100%;min-height:142px;object-fit:cover}
+    .mini-news .news-content{padding:18px}
+    .mini-news h3{font-size:1rem}
+
+    /* GALLERY */
+    .gallery-grid{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:220px 220px;gap:14px}
+    .gallery-item{border-radius:18px;overflow:hidden;position:relative}
+    .gallery-item:first-child{grid-row:1/3}
+    .gallery-item img{width:100%;height:100%;object-fit:cover;transition:.4s}
+    .gallery-item:hover img{transform:scale(1.05)}
+    .gallery-item:after{content:"";position:absolute;inset:0;background:rgba(0,0,0,.05)}
+
+    /* CTA */
+    .cta-wrap{
+      background:linear-gradient(135deg,#0f5132,#0b3a25);
+      border-radius:28px;padding:46px;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:32px;
+      position:relative;overflow:hidden
+    }
+    .cta-wrap:after{
+      content:"";position:absolute;width:280px;height:280px;border-radius:50%;
+      right:-100px;top:-130px;background:rgba(212,167,44,.15)
+    }
+    .cta-copy{max-width:670px;position:relative;z-index:2}
+    .cta-copy h2{font-size:clamp(1.8rem,3vw,2.8rem);line-height:1.15;margin-bottom:10px}
+    .cta-copy p{color:#d8e7de}
+    .cta-actions{display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:2}
+
+    /* CONTACT */
+    .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:32px}
+    .contact-card{
+      background:#0f5132;color:#fff;border-radius:24px;padding:34px
+    }
+    .contact-card h3{font-size:1.6rem;margin-bottom:8px}
+    .contact-card>p{color:#d8e7de;margin-bottom:26px}
+    .contact-list{display:grid;gap:18px}
+    .contact-row{display:flex;gap:14px;align-items:flex-start}
+    .contact-row i{
+      width:42px;height:42px;border-radius:12px;background:rgba(255,255,255,.12);
+      display:grid;place-items:center;flex:0 0 auto
+    }
+    .contact-row small{display:block;color:#bad3c4}
+    .contact-row strong{display:block;font-size:.94rem;margin-top:1px}
+    .form-card{
+      border:1px solid var(--border);border-radius:24px;padding:34px;background:#fff;box-shadow:0 16px 45px rgba(0,0,0,.05)
+    }
+    .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+    .field{display:grid;gap:7px}
+    .field.full{grid-column:1/-1}
+    .field label{font-size:.87rem;font-weight:700}
+    .field input,.field textarea{
+      border:1px solid #dfe6e2;border-radius:13px;padding:13px 14px;outline:none;background:#fbfcfb
+    }
+    .field input:focus,.field textarea:focus{border-color:#62a57e;box-shadow:0 0 0 4px rgba(15,81,50,.08)}
+    .field textarea{min-height:130px;resize:vertical}
+
+    /* FOOTER */
+    footer{background:#081b12;color:#d8e2dc;padding:58px 0 24px}
+    .footer-grid{display:grid;grid-template-columns:1.4fr .7fr .7fr .9fr;gap:34px}
+    .footer-brand p{color:#9fb2a7;margin:15px 0 20px;max-width:400px;font-size:.9rem}
+    .socials{display:flex;gap:10px}
+    .socials a{
+      width:40px;height:40px;border-radius:11px;background:#112b1d;display:grid;place-items:center;transition:.25s
+    }
+    .socials a:hover{background:var(--gold);color:#111}
+    .footer-col h4{color:#fff;margin-bottom:14px}
+    .footer-col a{display:block;color:#9fb2a7;margin:9px 0;font-size:.9rem}
+    .footer-col a:hover{color:#fff}
+    .copyright{
+      border-top:1px solid rgba(255,255,255,.08);margin-top:38px;padding-top:20px;
+      display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;color:#7f9588;font-size:.82rem
+    }
+
+    .wa-float{
+      position:fixed;right:22px;bottom:22px;z-index:999;
+      width:58px;height:58px;border-radius:50%;display:grid;place-items:center;
+      background:#25D366;color:#fff;font-size:1.65rem;box-shadow:0 12px 30px rgba(37,211,102,.35);
+      transition:.25s
+    }
+    .wa-float:hover{transform:translateY(-4px) scale(1.03)}
+
+    @media(max-width:980px){
+      .nav-links{
+        position:fixed;top:76px;left:4%;right:4%;display:none;flex-direction:column;align-items:stretch;
+        background:#fff;padding:20px;border-radius:18px;box-shadow:var(--shadow);border:1px solid var(--border)
+      }
+      .nav-links.show{display:flex}
+      .menu-toggle{display:block}
+      .desktop-cta{display:none}
+      .about-grid,.news-grid,.contact-grid{grid-template-columns:1fr}
+      .about-grid{gap:38px}
+      .quote-card{right:18px}
+      .card-grid{grid-template-columns:repeat(2,1fr)}
+      .facility-grid{grid-template-columns:repeat(2,1fr)}
+      .footer-grid{grid-template-columns:1.2fr 1fr 1fr}
+      .footer-brand{grid-column:1/-1}
+      .cta-wrap{align-items:flex-start;flex-direction:column}
+    }
+
+    @media(max-width:720px){
+      .topbar{display:none}
+      nav{height:70px}
+      .nav-links{top:70px}
+      .hero{min-height:650px;background-position:62% center}
+      .hero-content{padding:68px 0}
+      .hero h1{font-size:2.8rem}
+      .info-strip{margin-top:-30px}
+      .info-grid{grid-template-columns:1fr}
+      .info-item{border-right:0;border-bottom:1px solid var(--border)}
+      .info-item:last-child{border-bottom:0}
+      .section{padding:72px 0}
+      .stats-grid{grid-template-columns:repeat(2,1fr)}
+      .card-grid{grid-template-columns:1fr}
+      .facility-grid{grid-template-columns:1fr 1fr}
+      .facility{height:230px}
+      .gallery-grid{
+        grid-template-columns:1fr 1fr;grid-template-rows:260px 190px 190px
+      }
+      .gallery-item:first-child{grid-column:1/-1;grid-row:auto}
+      .gallery-item:nth-child(2),.gallery-item:nth-child(3),.gallery-item:nth-child(4),.gallery-item:nth-child(5){grid-column:auto}
+      .form-grid{grid-template-columns:1fr}
+      .field.full{grid-column:auto}
+      .footer-grid{grid-template-columns:1fr 1fr}
+      .cta-wrap{padding:32px 24px}
+    }
+
+    @media(max-width:520px){
+      .brand-text{font-size:.86rem}
+      .brand-text small{font-size:.6rem}
+      .logo{width:42px;height:42px}
+      .hero h1{font-size:2.35rem}
+      .hero .arabic{font-size:1.25rem}
+      .hero-badges{display:grid;grid-template-columns:1fr 1fr}
+      .hero-badge{min-width:0}
+      .about-image img{height:430px}
+      .quote-card{position:relative;right:auto;bottom:auto;width:94%;margin:-64px auto 0}
+      .facility-grid{grid-template-columns:1fr}
+      .facility{height:260px}
+      .mini-news{grid-template-columns:110px 1fr}
+      .gallery-grid{display:grid;grid-template-columns:1fr;grid-template-rows:none}
+      .gallery-item,.gallery-item:first-child{height:230px;grid-column:auto;grid-row:auto}
+      .footer-grid{grid-template-columns:1fr}
+      .copyright{flex-direction:column}
+      .wa-float{right:16px;bottom:16px;width:54px;height:54px}
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="container">
+      <div class="left">
+        <span><i class="fa-solid fa-location-dot"></i> Tanah Laut, Kalimantan Selatan</span>
+        <a href="mailto:info@sirajulhuda.ponpes.id"><i class="fa-solid fa-envelope"></i> info@sirajulhuda.ponpes.id</a>
+      </div>
+      <div class="right">
+        <span>Ikuti kami:</span>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="container">
+      <nav>
+        <a href="#beranda" class="brand">
+          <div class="logo"><i class="fa-solid fa-mosque"></i></div>
+          <div class="brand-text">
+            SIRAJUL HUDA
+            <small>PONDOK PESANTREN</small>
+          </div>
+        </a>
+
+        <div class="nav-links" id="navLinks">
+          <a href="#beranda">Beranda</a>
+          <a href="#profil">Profil</a>
+          <a href="#program">Program</a>
+          <a href="#fasilitas">Fasilitas</a>
+          <a href="#berita">Berita</a>
+          <a href="#galeri">Galeri</a>
+          <a href="#kontak">Kontak</a>
+        </div>
+
+        <a href="#ppdb" class="btn btn-green desktop-cta">
+          <i class="fa-solid fa-user-plus"></i> PPDB
+        </a>
+
+        <button class="menu-toggle" id="menuToggle" aria-label="Buka menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="beranda">
+      <div class="container">
+        <div class="hero-content">
+          <div class="arabic">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</div>
+          <h1>Membentuk Generasi <span>Berilmu, Beradab & Berprestasi</span></h1>
+          <p>
+            Pondok Pesantren Sirajul Huda hadir sebagai lembaga pendidikan Islam
+            yang memadukan pembinaan akhlak, penguatan ilmu agama, pendidikan formal,
+            dan pengembangan keterampilan santri.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#profil" class="btn btn-primary">
+              Mengenal Sirajul Huda <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#ppdb" class="btn btn-outline">
+              <i class="fa-solid fa-file-signature"></i> Informasi PPDB
+            </a>
+          </div>
+
+          <div class="hero-badges">
+            <div class="hero-badge">
+              <strong>Akhlak</strong>
+              <span>Adab sebagai pondasi pendidikan</span>
+            </div>
+            <div class="hero-badge">
+              <strong>Ilmu</strong>
+              <span>Agama dan pendidikan formal</span>
+            </div>
+            <div class="hero-badge">
+              <strong>Mandiri</strong>
+              <span>Membentuk karakter dan tanggung jawab</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="info-strip">
+      <div class="container">
+        <div class="info-grid">
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-book-quran"></i></div>
+            <div>
+              <h4>Pendidikan Terpadu</h4>
+              <p>Ilmu agama, umum, karakter, dan keterampilan dalam satu lingkungan pendidikan.</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-user-group"></i></div>
+            <div>
+              <h4>Pembinaan 24 Jam</h4>
+              <p>Pendampingan santri melalui kegiatan kelas, asrama, ibadah, dan pembiasaan harian.</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon"><i class="fa-solid fa-star-and-crescent"></i></div>
+            <div>
+              <h4>Lingkungan Islami</h4>
+              <p>Suasana belajar yang mendukung pembentukan adab, disiplin, ukhuwah, dan kemandirian.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section class="section" id="profil">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image">
+            <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?auto=format&fit=crop&w=1100&q=85" alt="Kegiatan santri">
+            <div class="quote-card">
+              <div class="arabic">طَلَبُ الْعِلْمِ فَرِيضَةٌ</div>
+              <strong>Menuntut ilmu adalah jalan menuju kemuliaan.</strong>
+            </div>
+          </div>
+
+          <div class="about-copy">
+            <span class="eyebrow"><i class="fa-solid fa-school"></i> Tentang Kami</span>
+            <h2>Pendidikan Islam yang membentuk ilmu, adab, dan masa depan.</h2>
+            <p>
+              Pondok Pesantren Sirajul Huda berkomitmen memberikan pendidikan terbaik
+              bagi santri melalui pembelajaran yang terarah, pembinaan karakter,
+              kedisiplinan, serta lingkungan pesantren yang aman dan kondusif.
+            </p>
+            <p>
+              Kami percaya bahwa keberhasilan pendidikan bukan hanya diukur dari nilai,
+              tetapi juga dari akhlak, kemandirian, tanggung jawab, dan kemampuan santri
+              memberi manfaat bagi masyarakat.
+            </p>
+
+            <div class="check-list">
+              <div class="check"><i class="fa-solid fa-circle-check"></i><span>Kurikulum agama dan pendidikan umum yang terintegrasi.</span></div>
+              <div class="check"><i class="fa-solid fa-circle-check"></i><span>Pembinaan ibadah, akhlak, bahasa, dan kedisiplinan.</span></div>
+              <div class="check"><i class="fa-solid fa-circle-check"></i><span>Kegiatan pengembangan minat, bakat, dan keterampilan santri.</span></div>
+            </div>
+
+            <a href="#program" class="btn btn-green">Lihat Program Pendidikan</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat"><strong>500+</strong><span>Santri Aktif</span></div>
+          <div class="stat"><strong>50+</strong><span>Tenaga Pendidik</span></div>
+          <div class="stat"><strong>15+</strong><span>Program & Kegiatan</span></div>
+          <div class="stat"><strong>24 Jam</strong><span>Pembinaan Pesantren</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section programs" id="program">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow"><i class="fa-solid fa-graduation-cap"></i> Program Pendidikan</span>
+          <h2>Program yang dirancang untuk tumbuh seimbang.</h2>
+          <p>Santri dibimbing agar kuat dalam ilmu, matang dalam akhlak, serta siap menghadapi perkembangan zaman.</p>
+        </div>
+
+        <div class="card-grid">
+          <div class="program-card">
+            <div class="icon"><i class="fa-solid fa-book-quran"></i></div>
+            <h3>Tahfidz & Tahsin Al-Qur'an</h3>
+            <p>Pembinaan bacaan Al-Qur'an, hafalan, murojaah, serta pembiasaan interaksi dengan Al-Qur'an setiap hari.</p>
+          </div>
+          <div class="program-card">
+            <div class="icon"><i class="fa-solid fa-book-open"></i></div>
+            <h3>Kitab & Dirasah Islamiyah</h3>
+            <p>Pembelajaran fiqih, akidah, akhlak, nahwu, sharaf, hadits, dan ilmu keislaman sesuai jenjang santri.</p>
+          </div>
+          <div class="program-card">
+            <div class="icon"><i class="fa-solid fa-language"></i></div>
+            <h3>Bahasa Arab & Inggris</h3>
+            <p>Pembiasaan bahasa melalui mufradat, conversation, pidato, praktik harian, dan kegiatan kebahasaan.</p>
+          </div>
+          <div class="program-card">
+            <div class="icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <h3>Teknologi & Literasi Digital</h3>
+            <p>Penguatan keterampilan digital, penggunaan teknologi secara produktif, aman, dan bertanggung jawab.</p>
+          </div>
+          <div class="program-card">
+            <div class="icon"><i class="fa-solid fa-person-running"></i></div>
+            <h3>Olahraga & Ekstrakurikuler</h3>
+            <p>Futsal, pencak silat, pramuka, seni, organisasi, dan kegiatan pengembangan minat serta bakat santri.</p>
+          </div>
+          <div class="program-card">
+            <div class="icon"><i class="fa-solid fa-hands-holding-circle"></i></div>
+            <h3>Karakter & Kepemimpinan</h3>
+            <p>Pelatihan tanggung jawab, kemandirian, kerja sama, kepemimpinan, kedisiplinan, dan pengabdian.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="fasilitas">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow"><i class="fa-solid fa-building"></i> Fasilitas</span>
+          <h2>Lingkungan belajar yang nyaman dan mendukung.</h2>
+          <p>Fasilitas pesantren disiapkan untuk menunjang kegiatan belajar, ibadah, pembinaan, dan kehidupan santri.</p>
+        </div>
+
+        <div class="facility-grid">
+          <div class="facility">
+            <img src="https://images.unsplash.com/photo-1564121211835-e88c852648ab?auto=format&fit=crop&w=800&q=80" alt="Masjid">
+            <span>Masjid & Tempat Ibadah</span>
+          </div>
+          <div class="facility">
+            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Ruang belajar">
+            <span>Ruang Kelas</span>
+          </div>
+          <div class="facility">
+            <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=800&q=80" alt="Perpustakaan">
+            <span>Perpustakaan</span>
+          </div>
+          <div class="facility">
+            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80" alt="Olahraga">
+            <span>Area Olahraga</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section news" id="berita">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow"><i class="fa-regular fa-newspaper"></i> Berita & Kegiatan</span>
+          <h2>Kabar terbaru dari Sirajul Huda.</h2>
+          <p>Informasi kegiatan santri, prestasi, agenda pesantren, dan pengumuman penting.</p>
+        </div>
+
+        <div class="news-grid">
+          <article class="featured-news">
+            <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1100&q=85" alt="Kegiatan pesantren">
+            <div class="news-content">
+              <div class="meta"><span><i class="fa-regular fa-calendar"></i> 8 September 2026</span><span>•</span><span>Kegiatan</span></div>
+              <h3>Semangat Santri dalam Membangun Budaya Belajar dan Disiplin</h3>
+              <p>Kegiatan pembinaan harian menjadi bagian penting dalam membentuk karakter santri yang berilmu, mandiri, dan bertanggung jawab.</p>
+            </div>
+          </article>
+
+          <div class="mini-list">
+            <article class="mini-news">
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=600&q=80" alt="Belajar">
+              <div class="news-content">
+                <div class="meta"><span>Akademik</span></div>
+                <h3>Penguatan Program Literasi dan Pembelajaran Santri</h3>
+              </div>
+            </article>
+
+            <article class="mini-news">
+              <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=600&q=80" alt="Kegiatan santri">
+              <div class="news-content">
+                <div class="meta"><span>Pesantren</span></div>
+                <h3>Kegiatan Muhadharah untuk Melatih Kepercayaan Diri</h3>
+              </div>
+            </article>
+
+            <article class="mini-news">
+              <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=600&q=80" alt="Teknologi">
+              <div class="news-content">
+                <div class="meta"><span>Digital</span></div>
+                <h3>Pemanfaatan Teknologi untuk Administrasi dan Pembelajaran</h3>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="galeri">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow"><i class="fa-regular fa-images"></i> Galeri</span>
+          <h2>Potret kehidupan di pesantren.</h2>
+          <p>Suasana belajar, kebersamaan, ibadah, kegiatan santri, dan aktivitas pengembangan diri.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?auto=format&fit=crop&w=1000&q=85" alt="Galeri 1"></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=700&q=80" alt="Galeri 2"></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=700&q=80" alt="Galeri 3"></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?auto=format&fit=crop&w=700&q=80" alt="Galeri 4"></div>
+          <div class="gallery-item"><img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&fit=crop&w=700&q=80" alt="Galeri 5"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="ppdb">
+      <div class="container">
+        <div class="cta-wrap">
+          <div class="cta-copy">
+            <span class="eyebrow" style="background:rgba(255,255,255,.12);color:#f8de88">
+              <i class="fa-solid fa-user-plus"></i> Penerimaan Santri Baru
+            </span>
+            <h2>Bergabung bersama keluarga besar Pondok Pesantren Sirajul Huda.</h2>
+            <p>Dapatkan informasi pendaftaran, persyaratan, biaya, jadwal seleksi, dan layanan konsultasi melalui panitia PPDB.</p>
+          </div>
+          <div class="cta-actions">
+            <a href="https://wa.me/6280000000000?text=Assalamu%27alaikum%2C%20saya%20ingin%20bertanya%20tentang%20PPDB%20Sirajul%20Huda." class="btn btn-primary" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i> Hubungi Panitia
+            </a>
+            <a href="#kontak" class="btn btn-outline">Lihat Kontak</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="kontak">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow"><i class="fa-solid fa-headset"></i> Kontak</span>
+          <h2>Kami siap membantu.</h2>
+          <p>Hubungi kami untuk informasi pendidikan, pendaftaran santri baru, kunjungan, dan kerja sama.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Pondok Pesantren Sirajul Huda</h3>
+            <p>Silakan sesuaikan alamat, nomor WhatsApp, email, dan media sosial dengan data resmi pesantren.</p>
+
+            <div class="contact-list">
+              <div class="contact-row">
+                <i class="fa-solid fa-location-dot"></i>
+                <div><small>Alamat</small><strong>Tanah Laut, Kalimantan Selatan, Indonesia</strong></div>
+              </div>
+              <div class="contact-row">
+                <i class="fa-brands fa-whatsapp"></i>
+                <div><small>WhatsApp</small><strong>+62 800-0000-0000</strong></div>
+              </div>
+              <div class="contact-row">
+                <i class="fa-solid fa-envelope"></i>
+                <div><small>Email</small><strong>info@sirajulhuda.ponpes.id</strong></div>
+              </div>
+              <div class="contact-row">
+                <i class="fa-solid fa-globe"></i>
+                <div><small>Website</small><strong>web.sirajulhuda.ponpes.id</strong></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-card">
+            <form id="contactForm">
+              <div class="form-grid">
+                <div class="field">
+                  <label>Nama</label>
+                  <input type="text" id="name" placeholder="Nama lengkap" required>
+                </div>
+                <div class="field">
+                  <label>No. WhatsApp</label>
+                  <input type="tel" id="phone" placeholder="08xxxxxxxxxx">
+                </div>
+                <div class="field full">
+                  <label>Subjek</label>
+                  <input type="text" id="subject" placeholder="Contoh: Informasi PPDB">
+                </div>
+                <div class="field full">
+                  <label>Pesan</label>
+                  <textarea id="message" placeholder="Tulis pesan Anda..." required></textarea>
+                </div>
+                <div class="field full">
+                  <button class="btn btn-green" type="submit">
+                    <i class="fa-brands fa-whatsapp"></i> Kirim via WhatsApp
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#beranda" class="brand" style="color:#fff">
+            <div class="logo"><i class="fa-solid fa-mosque"></i></div>
+            <div class="brand-text">SIRAJUL HUDA<small style="color:#90a99a">PONDOK PESANTREN</small></div>
+          </a>
+          <p>Mendidik dengan ilmu, membina dengan adab, dan mempersiapkan generasi yang bermanfaat bagi agama, bangsa, dan masyarakat.</p>
+          <div class="socials">
+            <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <a href="#beranda">Beranda</a>
+          <a href="#profil">Profil</a>
+          <a href="#program">Program</a>
+          <a href="#fasilitas">Fasilitas</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Informasi</h4>
+          <a href="#berita">Berita</a>
+          <a href="#galeri">Galeri</a>
+          <a href="#ppdb">PPDB</a>
+          <a href="#kontak">Kontak</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Layanan</h4>
+          <a href="#">E-Raport</a>
+          <a href="#">Portal Santri</a>
+          <a href="#">Pengumuman</a>
+          <a href="#">Download</a>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <span>© 2026 Pondok Pesantren Sirajul Huda. All rights reserved.</span>
+        <span>Website resmi Sirajul Huda</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/6280000000000?text=Assalamu%27alaikum%2C%20saya%20ingin%20bertanya%20tentang%20Pondok%20Pesantren%20Sirajul%20Huda." target="_blank" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+      menuToggle.innerHTML = navLinks.classList.contains('show')
+        ? '<i class="fa-solid fa-xmark"></i>'
+        : '<i class="fa-solid fa-bars"></i>';
+    });
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('show');
+        menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+      });
+    });
+
+    document.getElementById('contactForm').addEventListener('submit', function(e){
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const subject = document.getElementById('subject').value.trim();
+      const message = document.getElementById('message').value.trim();
+
+      const text =
+`Assalamu'alaikum.
+Saya ${name}.
+No. WhatsApp: ${phone || '-'}
+Subjek: ${subject || '-'}
+
+${message}`;
+
+      const nomorWA = '6280000000000'; // GANTI DENGAN NOMOR WHATSAPP RESMI
+      window.open(`https://wa.me/${nomorWA}?text=${encodeURIComponent(text)}`, '_blank');
+    });
+  </script>
+</body>
+</html>
