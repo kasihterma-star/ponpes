@@ -257,7 +257,7 @@
       width:82%;
       height:470px;
       border-radius:34px 150px 34px 34px;
-      background:linear-gradient(145deg,rgba(251,252,246,.10),rgba(232,239,218,.10)), url('images/hero-utama.jpg') center/cover no-repeat, linear-gradient(145deg,#fbfcf6,#e8efda);
+      background:linear-gradient(145deg,rgba(251,252,246,.10),rgba(232,239,218,.10)), url('hero-utama.jpeg') center/cover no-repeat, linear-gradient(145deg,#fbfcf6,#e8efda);
       border:1px solid var(--line);
       overflow:hidden;
       box-shadow:var(--shadow);
@@ -268,14 +268,14 @@
       width:42%;
       height:220px;
       border-radius:26px;
-      background:linear-gradient(145deg,rgba(247,250,239,.10),rgba(223,233,200,.10)), url('images/hero-kecil.jpg') center/cover no-repeat, linear-gradient(145deg,#f7faef,#dfe9c8);
+      background:linear-gradient(145deg,rgba(247,250,239,.10),rgba(223,233,200,.10)), url('hero-kecil.jpeg') center/cover no-repeat, linear-gradient(145deg,#f7faef,#dfe9c8);
       border:1px solid var(--line);
       overflow:hidden;
       box-shadow:var(--shadow);
     }
     .hero-main-photo::before,
     .hero-side-photo::before{
-      content:"FOTO";
+      content:"";
       position:absolute; inset:0;
       display:grid; place-items:center;
       color:rgba(93,143,27,.55);
@@ -340,7 +340,7 @@
     .about-photo{
       height:520px;
       border-radius:30px;
-      background:linear-gradient(145deg,rgba(249,251,242,.10),rgba(223,233,202,.10)), url('images/profil-pesantren.jpg') center/cover no-repeat, linear-gradient(145deg,#f9fbf2,#dfe9ca);
+      background:linear-gradient(145deg,rgba(249,251,242,.10),rgba(223,233,202,.10)), url('profil-pesantren.jpeg') center/cover no-repeat, linear-gradient(145deg,#f9fbf2,#dfe9ca);
       border:1px solid var(--line);
       box-shadow:var(--shadow);
       position:relative;
@@ -503,7 +503,7 @@
     }
     .facility-large::before,
     .facility-small::before{
-      content:"FOTO";
+      content:"";
       position:absolute; inset:0;
       display:grid; place-items:center;
       color:rgba(93,143,27,.55);
@@ -540,7 +540,7 @@
     }
     .news-photo{
       height:320px;
-      background:linear-gradient(145deg,rgba(247,250,239,.10),rgba(224,234,203,.10)), url('images/berita-utama.jpg') center/cover no-repeat, linear-gradient(145deg,#f7faef,#e0eacb);
+      background:linear-gradient(145deg,rgba(247,250,239,.10),rgba(224,234,203,.10)), url('berita-utama.jpeg') center/cover no-repeat, linear-gradient(145deg,#f7faef,#e0eacb);
       position:relative;
     }
     .news-photo::before{
@@ -884,6 +884,23 @@
         width:54px;height:54px;
       }
     }
+  
+    @media(max-width:700px){
+      #unit .program-grid{grid-template-columns:1fr !important;}
+    }
+
+  
+    /* Placeholder FOTO dinonaktifkan setelah foto asli diunggah */
+    .hero-main-photo::before,
+    .hero-side-photo::before,
+    .about-photo::before,
+    .facility-large::before,
+    .facility-small::before,
+    .news-photo::before{
+      content:none !important;
+      display:none !important;
+    }
+
   </style>
 </head>
 <body>
@@ -892,7 +909,7 @@
     <div class="container">
       <div class="left">
         <span><i class="fa-solid fa-location-dot"></i> Jalan Sirajul Huda, Karang Taruna, Kec. Pelaihari, Kabupaten Tanah Laut, Kalimantan Selatan 70812</span>
-        <span><i class="fa-solid fa-envelope"></i> info@sirajulhuda.ponpes.id</span>
+        <span><i class="fa-solid fa-envelope"></i> sirajulhudaponpes@gmail.com</span>
       </div>
       <div class="right">
         <span>Website Resmi Pondok Pesantren Sirajul Huda</span>
@@ -917,6 +934,7 @@
           <a href="#program">Pendidikan</a>
           <a href="#fasilitas">Fasilitas</a>
           <a href="#berita">Artikel</a>
+          <a href="#unit">Unit</a>
           <a href="#lokasi">Lokasi</a>
           <a href="#kontak">Kontak</a>
         </div>
@@ -1114,15 +1132,15 @@
         </div>
 
         <div class="facility-grid">
-          <div class="facility-large reveal" style="background-image:linear-gradient(145deg,rgba(251,252,246,.08),rgba(229,237,209,.08)),url('images/fasilitas-masjid.jpg');background-position:center;background-size:cover;">
+          <div class="facility-large reveal" style="background-image:linear-gradient(145deg,rgba(251,252,246,.08),rgba(229,237,209,.08)),url('fasilitas-masjid.jpeg');background-position:center;background-size:cover;">
             <span class="facility-label">Masjid & Pusat Kegiatan</span>
           </div>
 
           <div class="stack">
-            <div class="facility-small reveal" style="background-image:linear-gradient(145deg,rgba(251,252,246,.08),rgba(229,237,209,.08)),url('images/fasilitas-kelas.jpg');background-position:center;background-size:cover;">
+            <div class="facility-small reveal" style="background-image:linear-gradient(145deg,rgba(251,252,246,.08),rgba(229,237,209,.08)),url('fasilitas-kelas.jpeg');background-position:center;background-size:cover;">
               <span class="facility-label">Ruang Kelas</span>
             </div>
-            <div class="facility-small reveal" style="background-image:linear-gradient(145deg,rgba(251,252,246,.08),rgba(229,237,209,.08)),url('images/fasilitas-asrama.jpg');background-position:center;background-size:cover;">
+            <div class="facility-small reveal" style="background-image:linear-gradient(145deg,rgba(251,252,246,.08),rgba(229,237,209,.08)),url('fasilitas-asrama.jpeg');background-position:center;background-size:cover;">
               <span class="facility-label">Asrama Santri</span>
             </div>
           </div>
@@ -1193,6 +1211,45 @@
       </div>
     </section>
 
+
+
+    <section class="section programs" id="unit">
+      <div class="container">
+        <div class="section-head-row reveal">
+          <div>
+            <div class="eyebrow">Unit & Layanan Digital</div>
+            <h2 class="section-title">Akses layanan pendidikan Sirajul Huda.</h2>
+          </div>
+          <p class="section-sub">
+            Akses cepat menuju layanan akademik SMP dan website resmi SMA IT Sirajul Huda.
+          </p>
+        </div>
+
+        <div class="program-grid" style="grid-template-columns:repeat(2,1fr);">
+          <a href="https://erapor.sirajulhuda.ponpes.id/" target="_blank" class="program-card reveal" style="color:inherit;">
+            <span class="num"><i class="fa-solid fa-school"></i></span>
+            <h3>SMP Sirajul Huda</h3>
+            <p>
+              Akses layanan E-Rapor SMP Sirajul Huda untuk kebutuhan akademik dan informasi nilai.
+            </p>
+            <div style="margin-top:18px;color:var(--primary);font-weight:700;">
+              Buka E-Rapor SMP <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+
+          <a href="https://smaitsirajulhuda.sch.id/" target="_blank" class="program-card reveal" style="color:inherit;">
+            <span class="num"><i class="fa-solid fa-graduation-cap"></i></span>
+            <h3>SMA IT Sirajul Huda</h3>
+            <p>
+              Kunjungi website resmi SMA IT Sirajul Huda untuk profil sekolah, informasi, dan kegiatan terbaru.
+            </p>
+            <div style="margin-top:18px;color:var(--primary);font-weight:700;">
+              Buka Website SMA <i class="fa-solid fa-arrow-up-right-from-square"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
 
     <section class="section" id="lokasi" style="padding-top:30px;">
       <div class="container">
@@ -1266,7 +1323,7 @@
               <i class="fa-solid fa-envelope"></i>
               <div>
                 <small>Email</small>
-                <strong>info@sirajulhuda.ponpes.id</strong>
+                <strong>sirajulhudaponpes@gmail.com</strong>
               </div>
             </div>
             <div class="contact-row">
@@ -1364,9 +1421,9 @@
 
         <div class="footer-col">
           <h4>Layanan</h4>
-          <a href="#">E-Raport</a>
-          <a href="#">Portal Santri</a>
-          <a href="#">Download</a>
+          <a href="https://erapor.sirajulhuda.ponpes.id/" target="_blank">E-Rapor SMP</a>
+          <a href="https://smaitsirajulhuda.sch.id/" target="_blank">Website SMA IT</a>
+          <a href="#ppdb">PPDB</a>
         </div>
       </div>
 
