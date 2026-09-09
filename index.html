@@ -901,6 +901,286 @@
       display:none !important;
     }
 
+  
+    /* ===== SEJARAH & VISI MISI ===== */
+    .profile-foundation{
+      margin-top:14px;
+      background:linear-gradient(135deg,#f8f4d8,#fffdf1);
+      border:1px solid #eadb8a;
+      border-radius:18px;
+      padding:18px 20px;
+    }
+    .profile-foundation small{
+      display:block;
+      color:#8a7422;
+      font-size:.72rem;
+      font-weight:700;
+      letter-spacing:.1em;
+      text-transform:uppercase;
+      margin-bottom:3px;
+    }
+    .profile-foundation strong{
+      color:var(--primary-dark);
+      font-family:'Playfair Display',serif;
+      font-size:1.15rem;
+    }
+    .foundation-units{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin-top:12px;
+    }
+    .foundation-units span{
+      display:inline-flex;
+      align-items:center;
+      min-height:32px;
+      padding:5px 11px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--line);
+      color:#626957;
+      font-size:.77rem;
+      font-weight:700;
+    }
+
+    .history-section{
+      background:var(--paper);
+      position:relative;
+      overflow:hidden;
+    }
+    .history-section::before{
+      content:"";
+      position:absolute;
+      width:420px;
+      height:420px;
+      border-radius:50%;
+      left:-210px;
+      top:80px;
+      background:rgba(241,190,40,.08);
+      pointer-events:none;
+    }
+    .history-intro{
+      display:grid;
+      grid-template-columns:.78fr 1.22fr;
+      gap:44px;
+      align-items:end;
+      margin-bottom:48px;
+      position:relative;
+      z-index:2;
+    }
+    .history-intro-card{
+      background:linear-gradient(135deg,var(--primary),var(--primary-dark));
+      color:#fff;
+      border-radius:26px;
+      padding:30px;
+      box-shadow:var(--shadow);
+    }
+    .history-intro-card small{
+      display:block;
+      color:#e9f1d8;
+      text-transform:uppercase;
+      letter-spacing:.13em;
+      font-size:.72rem;
+      font-weight:700;
+      margin-bottom:8px;
+    }
+    .history-intro-card h3{
+      font-family:'Playfair Display',serif;
+      font-size:1.7rem;
+      line-height:1.2;
+      margin-bottom:10px;
+    }
+    .history-intro-card p{
+      color:#e4edcf;
+      font-size:.9rem;
+    }
+    .history-timeline{
+      display:grid;
+      grid-template-columns:repeat(2,1fr);
+      gap:18px;
+      position:relative;
+      z-index:2;
+    }
+    .history-item{
+      display:grid;
+      grid-template-columns:54px 1fr;
+      gap:16px;
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:22px;
+      padding:22px;
+      transition:.25s ease;
+      box-shadow:0 8px 20px rgba(0,0,0,.025);
+    }
+    .history-item:hover{
+      transform:translateY(-4px);
+      box-shadow:var(--shadow);
+      border-color:#d9e3c1;
+    }
+    .history-no{
+      width:54px;
+      height:54px;
+      border-radius:17px;
+      display:grid;
+      place-items:center;
+      background:linear-gradient(135deg,var(--accent),#ffe58e);
+      color:#493809;
+      font-family:'Playfair Display',serif;
+      font-size:1.25rem;
+      font-weight:700;
+      box-shadow:0 8px 18px rgba(241,190,40,.2);
+    }
+    .history-date{
+      display:block;
+      color:var(--primary);
+      font-size:.78rem;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+      font-weight:700;
+      margin-bottom:6px;
+    }
+    .history-item h3{
+      font-family:'Playfair Display',serif;
+      color:var(--primary-dark);
+      font-size:1.23rem;
+      line-height:1.25;
+      margin-bottom:7px;
+    }
+    .history-item p{
+      color:var(--soft);
+      font-size:.9rem;
+      line-height:1.6;
+    }
+
+    .vision-section{
+      background:linear-gradient(180deg,#f2f6e9 0%,#fbfcf7 100%);
+    }
+    .vision-grid{
+      display:grid;
+      grid-template-columns:.83fr 1.17fr;
+      gap:22px;
+      align-items:start;
+    }
+    .vision-card,
+    .mission-card,
+    .goal-card{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:26px;
+      padding:30px;
+      box-shadow:0 10px 24px rgba(0,0,0,.03);
+    }
+    .vision-card{
+      background:linear-gradient(145deg,#fffef7,#f8f1c7);
+      border-color:#ebdc8d;
+      position:sticky;
+      top:110px;
+    }
+    .vm-icon{
+      width:52px;
+      height:52px;
+      border-radius:16px;
+      display:grid;
+      place-items:center;
+      background:var(--accent);
+      color:#473706;
+      font-size:1.2rem;
+      margin-bottom:18px;
+    }
+    .vision-card h3,
+    .mission-card h3,
+    .goal-card h3{
+      font-family:'Playfair Display',serif;
+      color:var(--primary-dark);
+      font-size:1.65rem;
+      margin-bottom:12px;
+    }
+    .vision-card p{
+      font-family:'Playfair Display',serif;
+      color:#3b422f;
+      font-size:1.18rem;
+      line-height:1.65;
+    }
+    .vm-stack{
+      display:grid;
+      gap:20px;
+    }
+    .vm-list{
+      list-style:none;
+      counter-reset:vm;
+      display:grid;
+      gap:14px;
+    }
+    .vm-list li{
+      counter-increment:vm;
+      display:grid;
+      grid-template-columns:38px 1fr;
+      gap:12px;
+      color:var(--soft);
+      font-size:.93rem;
+    }
+    .vm-list li::before{
+      content:counter(vm);
+      width:34px;
+      height:34px;
+      border-radius:50%;
+      display:grid;
+      place-items:center;
+      background:var(--muted);
+      color:var(--primary);
+      font-weight:700;
+      font-size:.82rem;
+    }
+    .motto-box{
+      margin-top:24px;
+      border-radius:22px;
+      padding:24px;
+      background:linear-gradient(135deg,var(--primary-dark),var(--primary));
+      color:#fff;
+      text-align:center;
+      box-shadow:var(--shadow);
+    }
+    .motto-box small{
+      display:block;
+      text-transform:uppercase;
+      letter-spacing:.14em;
+      color:#dce8c6;
+      margin-bottom:8px;
+      font-weight:700;
+      font-size:.72rem;
+    }
+    .motto-box strong{
+      font-family:'Playfair Display',serif;
+      font-size:clamp(1.4rem,3vw,2.15rem);
+      color:#ffe68e;
+    }
+
+    @media(max-width:980px){
+      .history-intro,
+      .vision-grid{
+        grid-template-columns:1fr;
+      }
+      .vision-card{
+        position:static;
+      }
+    }
+
+    @media(max-width:700px){
+      .history-timeline{
+        grid-template-columns:1fr;
+      }
+      .history-item{
+        grid-template-columns:46px 1fr;
+        padding:18px;
+      }
+      .history-no{
+        width:46px;
+        height:46px;
+        border-radius:14px;
+        font-size:1.05rem;
+      }
+    }
+
   </style>
 </head>
 <body>
@@ -931,11 +1211,11 @@
         <div class="nav-links" id="navLinks">
           <a href="#beranda">Beranda</a>
           <a href="#profil">Profil</a>
+          <a href="#sejarah">Sejarah</a>
+          <a href="#visi-misi">Visi Misi</a>
           <a href="#program">Pendidikan</a>
           <a href="#fasilitas">Fasilitas</a>
-          <a href="#berita">Artikel</a>
           <a href="#unit">Unit</a>
-          <a href="#lokasi">Lokasi</a>
           <a href="#kontak">Kontak</a>
         </div>
 
@@ -954,11 +1234,11 @@
         <div class="hero-grid">
           <div class="hero-copy reveal">
             <div class="eyebrow">Pondok Pesantren Modern</div>
-            <h1>Membangun Generasi <span>Berilmu, Beradab, dan Berprestasi</span></h1>
+            <h1>Membangun Generasi <span>Berilmu, Berakhlak, dan Bermanfaat untuk Umat</span></h1>
             <p>
-              Pondok Pesantren Sirajul Huda hadir sebagai lembaga pendidikan Islam
-              yang memadukan ilmu agama, pendidikan formal, pembinaan akhlak,
-              dan pengembangan karakter santri dalam lingkungan yang islami.
+              Pondok Pesantren Sirajul Huda berada di bawah naungan Yayasan Bunyan Syadid
+              dan hadir sebagai lembaga pendidikan Islam yang memadukan ilmu agama,
+              pendidikan formal, pembinaan akhlak, dan pengembangan karakter santri.
             </p>
 
             <div class="hero-actions">
@@ -1032,6 +1312,17 @@
               <small style="display:block;color:var(--soft);font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:4px;">Pengasuh Pondok</small>
               <strong style="font-family:'Playfair Display',serif;font-size:1.25rem;color:var(--primary-dark);">KH. Abdurrahman Husein</strong>
             </div>
+            <div class="profile-foundation">
+              <div>
+                <small>Yayasan</small>
+                <strong>Yayasan Bunyan Syadid</strong>
+              </div>
+              <div class="foundation-units">
+                <span>Pondok Pesantren Sirajul Huda</span>
+                <span>SMP Islam Terpadu Sirajul Huda</span>
+                <span>SMA Islam Terpadu Sirajul Huda</span>
+              </div>
+            </div>
 
             <div class="value-grid">
               <div class="value-card">
@@ -1053,6 +1344,225 @@
                 <i class="fa-solid fa-compass"></i>
                 <h4>Kemandirian</h4>
                 <p>Melatih kepercayaan diri, disiplin, dan kemampuan mengelola diri.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section history-section" id="sejarah">
+      <div class="container">
+        <div class="history-intro reveal">
+          <div>
+            <div class="eyebrow">Perjalanan & Sejarah</div>
+            <h2 class="section-title">Jejak perjalanan Pondok Pesantren Sirajul Huda.</h2>
+            <p class="section-sub">
+              Perjalanan Pondok Pesantren Sirajul Huda berawal dari pendirian Yayasan Bunyan Syadid,
+              kemudian berkembang dengan pendidikan pesantren serta unit pendidikan formal.
+            </p>
+          </div>
+
+          <div class="history-intro-card">
+            <small>Yayasan Bunyan Syadid</small>
+            <h3>Membangun Generasi Berilmu, Berakhlak dan Bermanfaat untuk Umat</h3>
+            <p>
+              Yayasan Bunyan Syadid menaungi Pondok Pesantren Sirajul Huda,
+              SMP Islam Terpadu Sirajul Huda, dan SMA Islam Terpadu Sirajul Huda.
+            </p>
+          </div>
+        </div>
+
+        <div class="history-timeline">
+          <article class="history-item reveal">
+            <div class="history-no">1</div>
+            <div>
+              <span class="history-date">08 Januari 2009</span>
+              <h3>Awal Yayasan</h3>
+              <p>
+                Yayasan Bunyan Syadid dibentuk pada tanggal 08 Januari 2009 dengan nama asal
+                yayasan Al Bunyan dan ditetapkan dengan Nama Bunyan Syadid pada tanggal 20 Februari 2009.
+              </p>
+            </div>
+          </article>
+
+          <article class="history-item reveal">
+            <div class="history-no">2</div>
+            <div>
+              <span class="history-date">26 Oktober 2009</span>
+              <h3>Akta Pendirian Yayasan</h3>
+              <p>
+                Yayasan Bunyan Syadid mendapatkan akta pendirian tanggal 26 Oktober 2009
+                dengan 8 pendiri dan 23 pengurus yayasan.
+              </p>
+            </div>
+          </article>
+
+          <article class="history-item reveal">
+            <div class="history-no">3</div>
+            <div>
+              <span class="history-date">18 Oktober 2012 M / 02 Dzulhijjah 1433 H</span>
+              <h3>Peletakan Batu Pertama Pondok</h3>
+              <p>
+                Yayasan Bunyan Syadid mendirikan Pondok dan peletakan batu pertama pada hari Kamis,
+                18 Oktober 2012 M atau 02 Dzulhijjah 1433 H dengan nama Pondok Falahussalam.
+              </p>
+            </div>
+          </article>
+
+          <article class="history-item reveal">
+            <div class="history-no">4</div>
+            <div>
+              <span class="history-date">Awal Tahun 2015</span>
+              <h3>Menjadi Pondok Sirajul Huda</h3>
+              <p>
+                Nama pondok diganti menjadi Pondok Sirajul Huda. Dan awal dimulainya pendaftaran
+                penerimaan santri tahun ajaran 2015/2016 pada 1 Mei 2015.
+              </p>
+            </div>
+          </article>
+
+          <article class="history-item reveal">
+            <div class="history-no">5</div>
+            <div>
+              <span class="history-date">01 Juli 2015</span>
+              <h3>Santri Putra Pertama</h3>
+              <p>
+                Sebanyak 9 orang santri pertama putra masuk menginap di pondok.
+              </p>
+            </div>
+          </article>
+
+          <article class="history-item reveal">
+            <div class="history-no">6</div>
+            <div>
+              <span class="history-date">10 November 2016</span>
+              <h3>Izin Operasional Pondok</h3>
+              <p>
+                Pondok Sirajul Huda memperoleh izin operasional dari Kementerian Agama.
+              </p>
+            </div>
+          </article>
+
+          <article class="history-item reveal">
+            <div class="history-no">7</div>
+            <div>
+              <span class="history-date">01 Juli 2018</span>
+              <h3>Santriwati Perdana</h3>
+              <p>
+                Tahun ajaran 2018/2019 penerimaan Santriwati perdana Sirajul Huda sebanyak
+                26 orang sebagai santri pertama putri. Interval jarak antara Sirajul Huda putra
+                dan Sirajul Huda putri 3 tahun dalam penerimaan santri.
+              </p>
+            </div>
+          </article>
+
+          <article class="history-item reveal">
+            <div class="history-no">8</div>
+            <div>
+              <span class="history-date">Tahun 2018</span>
+              <h3>Pendidikan Formal SMPIT</h3>
+              <p>
+                Pada tahun itu juga dimulailah pendidikan formal tahun ajaran 2018/2019 yaitu
+                SMPIT dengan izin operasional tahun 2018.
+              </p>
+            </div>
+          </article>
+
+          <article class="history-item reveal">
+            <div class="history-no">9</div>
+            <div>
+              <span class="history-date">Tahun Ajaran 2019/2020</span>
+              <h3>Dimulainya SMA IT Sirajul Huda</h3>
+              <p>
+                Dimulailah pendidikan formal SMA IT Sirajul Huda.
+              </p>
+            </div>
+          </article>
+
+          <article class="history-item reveal">
+            <div class="history-no">10</div>
+            <div>
+              <span class="history-date">07 Desember 2020</span>
+              <h3>Izin Operasional SMA IT</h3>
+              <p>
+                SMA IT Sirajul Huda mendapatkan izin operasional pada tanggal 7 Desember 2020.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section vision-section" id="visi-misi">
+      <div class="container">
+        <div class="section-head-row reveal">
+          <div>
+            <div class="eyebrow">Arah Pendidikan</div>
+            <h2 class="section-title">Visi, Misi & Tujuan Pondok.</h2>
+          </div>
+          <p class="section-sub">
+            Landasan pendidikan Pondok Pesantren Sirajul Huda dalam membentuk kader ulama
+            dan generasi ahlus sunnah wal jama’ah.
+          </p>
+        </div>
+
+        <div class="vision-grid">
+          <div class="vision-card reveal">
+            <div class="vm-icon"><i class="fa-solid fa-bullseye"></i></div>
+            <h3>Visi</h3>
+            <p>
+              Menjadi ma’had yang melahirkan kader ulama ahlus sunnah wal jama’ah yang
+              tafaqquh fiddin, berilmu amaliah dan beramal ilmiah berdasarkan Kitabullah
+              dan Sunnah Rasulullah SAW serta berbasis Tahfizh Al Qur’an.
+            </p>
+          </div>
+
+          <div class="vm-stack">
+            <div class="mission-card reveal">
+              <div class="vm-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+              <h3>Misi</h3>
+              <ol class="vm-list">
+                <li>
+                  Menyelenggarakan ta’lim (pembelajaran) dengan program kitab Turats
+                  (kitab kuning/klasik) secara intensif dan efektif.
+                </li>
+                <li>
+                  Mengembangkan manajemen pengelolaan pendidikan yang dinamis dan inovatif
+                  dengan prinsip: “Melestarikan tradisi lama yang baik dan mengembangkan
+                  tradisi baru yang lebih baik”.
+                </li>
+                <li>
+                  Berperan secara aktif dalam membangun kesadaran masyarakat melalui
+                  pemikiran-pemikiran ahlus sunnah wal jama’ah dalam berakidah, beribadah,
+                  berakhlak dan bermu’amalah.
+                </li>
+              </ol>
+            </div>
+
+            <div class="goal-card reveal">
+              <div class="vm-icon"><i class="fa-solid fa-chart-line"></i></div>
+              <h3>Tujuan</h3>
+              <ol class="vm-list">
+                <li>
+                  Melahirkan insan yang berilmu amaliah dan beramal ilmiah berlandaskan
+                  Al Qur’an, Assunnah, Ijma’ dan Qiyas.
+                </li>
+                <li>
+                  Mencetak generasi ahlus sunnah wal jama’ah yang tangguh dan siap
+                  menghadapi tantangan zaman.
+                </li>
+                <li>
+                  Membentuk generasi ahlus sunnah wal jama’ah yang istiqomah, mampu
+                  menjaga dan memelihara tradisi ahlus sunnah wal jama’ah.
+                </li>
+              </ol>
+
+              <div class="motto-box">
+                <small>Nilai Utama</small>
+                <strong>Berbudi Pekerti, Berilmu Tinggi, Beramal Nyata</strong>
               </div>
             </div>
           </div>
@@ -1408,6 +1918,8 @@
           <h4>Menu</h4>
           <a href="#beranda">Beranda</a>
           <a href="#profil">Profil</a>
+          <a href="#sejarah">Sejarah</a>
+          <a href="#visi-misi">Visi & Misi</a>
           <a href="#program">Pendidikan</a>
           <a href="#fasilitas">Fasilitas</a>
         </div>
