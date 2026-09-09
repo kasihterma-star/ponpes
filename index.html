@@ -146,12 +146,23 @@
       gap:12px;
     }
     .logo{
-      width:48px;height:48px;border-radius:16px;
-      background:linear-gradient(135deg,var(--accent),#ffe083);
-      color:var(--primary-dark);
-      display:grid;place-items:center;
-      font-size:1.15rem;
-      box-shadow:0 10px 24px rgba(241,190,40,.28);
+      width:54px;
+      height:54px;
+      border-radius:14px;
+      background:#fff;
+      display:grid;
+      place-items:center;
+      overflow:hidden;
+      border:1px solid var(--line);
+      box-shadow:0 8px 20px rgba(51,64,30,.10);
+      flex:0 0 auto;
+    }
+    .logo img{
+      width:100%;
+      height:100%;
+      object-fit:contain;
+      padding:4px;
+      display:block;
     }
     .brand-copy strong{
       display:block;
@@ -1201,7 +1212,7 @@
     <div class="container">
       <nav>
         <a href="#beranda" class="brand">
-          <div class="logo"><i class="fa-solid fa-mosque"></i></div>
+          <div class="logo"><img src="logo-sirajul-huda.png" alt="Logo Pondok Pesantren Sirajul Huda"></div>
           <div class="brand-copy">
             <strong>SIRAJUL HUDA</strong>
             <small>PONDOK PESANTREN</small>
@@ -1896,7 +1907,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#beranda" class="brand">
-            <div class="logo"><i class="fa-solid fa-mosque"></i></div>
+            <div class="logo"><img src="logo-sirajul-huda.png" alt="Logo Pondok Pesantren Sirajul Huda"></div>
             <div class="brand-copy">
               <strong style="color:#fff7d8">SIRAJUL HUDA</strong>
               <small style="color:#c8d5ab">PONDOK PESANTREN</small>
@@ -1951,6 +1962,18 @@
   </a>
 
   <script>
+
+    document.querySelectorAll('.logo img').forEach(img => {
+      img.addEventListener('error', () => {
+        img.style.display = 'none';
+        const fallback = document.createElement('i');
+        fallback.className = 'fa-solid fa-mosque';
+        fallback.style.color = 'var(--primary-dark)';
+        fallback.style.fontSize = '1.15rem';
+        img.parentElement.appendChild(fallback);
+      }, { once: true });
+    });
+
     const menuBtn = document.getElementById('menuBtn');
     const navLinks = document.getElementById('navLinks');
 
